@@ -98,7 +98,7 @@
           <div class="flex flex-row items-center justify-between">
             <h1 class="text-2xl">Overview</h1>
             <div
-              class="border border-[#D9D9D9] bg-white rounded-sm text-lg px-4 py-2 ml-4 flex flex-row items-center gap-2"
+              class="border border-[#D9D9D9] bg-white rounded-sm text-lg px-4 py-1.5 ml-4 flex flex-row items-center gap-2"
             >
               <select
                 class="w-full bg-transparent outline-none appearance-none tracking-wide font-light"
@@ -130,7 +130,7 @@
                 </h2>
                 <div class="flex flex-row mt-4 justify-between">
                   <span class="text-3xl">₹2,312.23</span>
-                  <a class="flex flex-row items-center"
+                  <a class="flex flex-row items-center underline cursor-pointer"
                     >23 orders
                     <img
                       src="./assets//icons/chevron.svg"
@@ -155,14 +155,15 @@
                 <h2 class="tracking-wide font-light flex flex-row items-center">
                   Amount Pending
                   <img
-                    src="./assets/icons/info-white.svg"
+                    src="./assets/icons/info.svg"
                     alt="info"
                     class="h-4 w-4 text-white ml-2"
                   />
                 </h2>
                 <div class="flex flex-row mt-4 justify-between">
                   <span class="text-3xl text-[#1A181E]">₹92,312.20</span>
-                  <a class="flex flex-row items-center text-[#146EB4] underline"
+                  <a
+                    class="flex flex-row items-center text-[#146EB4] underline cursor-pointer"
                     >13 orders
                     <svg
                       width="9"
@@ -191,7 +192,7 @@
                 <h2 class="tracking-wide font-light flex flex-row items-center">
                   Amount Processed
                   <img
-                    src="./assets/icons/info-white.svg"
+                    src="./assets/icons/info.svg"
                     alt="info"
                     class="h-4 w-4 text-white ml-2"
                   />
@@ -253,6 +254,37 @@
                 </div>
               </div>
             </div>
+            <table class="w-full my-3 border-collapse">
+              <thead class="p-3 bg-[#F2F2F2] text-[#4D4D4D] rounded-md">
+                <tr class="font-normal">
+                  <th class="font-normal p-3 text-left">Date</th>
+                  <th class="font-normal p-3 text-left">Status</th>
+                  <th class="font-normal p-3 text-left">Transaction ID</th>
+                  <th class="font-normal p-3 text-right">Order amount</th>
+                  <th class="font-normal p-3 text-right">Transaction fees</th>
+                  <th class="font-normal p-3 text-right">Total</th>
+                </tr>
+              </thead>
+              <tbody class="p-3">
+                <!-- <tr class="p-3 border-t-2 border-[#F2F2F2]">
+                  <td class="font-medium p-3 text-left text-[#146EB4]">
+                    Today, 09:00 PM
+                  </td>
+                  <td
+                    class="font-light p-3 text-left flex flex-row items-center"
+                  >
+                    <div
+                      class="mr-1.5 w-2.5 h-2.5 bg-[#999999] rounded-full"
+                    ></div>
+                    Processing
+                  </td>
+                  <td class="font-light p-3 text-left">131634495747</td>
+                  <td class="font-light p-3 text-right">₹10,125.00</td>
+                  <td class="font-light p-3 text-right">₹1,125.00</td>
+                  <td class="font-light p-3 text-right">₹9,312</td>
+                </tr> -->
+              </tbody>
+            </table>
           </div>
         </div>
       </main>
@@ -339,6 +371,92 @@
         }</span>
           `;
         navItems.appendChild(navItem);
+      });
+
+      // render table rows
+      const TABLE_ITEMS = [
+        {
+          date: "Today, 09:00 PM",
+          status: "Processing",
+          transactionID: "131634495747",
+          orderAmount: "10,125.00",
+          fees: "1,125.00",
+          total: "9,312",
+        },
+        {
+          date: "Today, 03:00 PM",
+          status: "Successful",
+          transactionID: "131634495747",
+          orderAmount: "10,125.00",
+          fees: "1,125.00",
+          total: "9,312",
+        },
+        {
+          date: "Today, 09:00 AM",
+          status: "Successful",
+          transactionID: "131634495747",
+          orderAmount: "10,125.00",
+          fees: "1,125.00",
+          total: "9,312",
+        },
+        {
+          date: "Yesterday, 3:00 PM",
+          status: "Successful",
+          transactionID: "131634495747",
+          orderAmount: "10,125.00",
+          fees: "1,125.00",
+          total: "9,312",
+        },
+        {
+          date: "Yesterday, 09:00 AM",
+          status: "Successful",
+          transactionID: "131634495747",
+          orderAmount: "10,125.00",
+          fees: "1,125.00",
+          total: "9,312",
+        },
+        {
+          date: "12 Jul 2023, 03:00 PM",
+          status: "Successful",
+          transactionID: "131634495747",
+          orderAmount: "10,125.00",
+          fees: "1,125.00",
+          total: "9,312",
+        },
+        {
+          date: "12 Jul 2023, 11:00 AM",
+          status: "Successful",
+          transactionID: "131634495747",
+          orderAmount: "10,125.00",
+          fees: "1,125.00",
+          total: "9,312",
+        },
+      ];
+
+      const tableBody = document.getElementsByTagName("tbody")[0];
+      TABLE_ITEMS.forEach((item) => {
+        const row = document.createElement("tr");
+        row.classList.add("p-3", "border-t-2", "border-[#F2F2F2]");
+        row.innerHTML = `
+        <td class="font-medium p-3 text-left text-[#146EB4]">
+            ${item.date}
+        </td>
+        <td
+        class="font-light p-3 text-left flex flex-row items-center"
+        >
+        <div
+            class="mr-1.5 w-2.5 h-2.5 ${
+              item.status === "Processing" ? "bg-[#999999]" : "bg-[#17B31B]"
+            } rounded-full"
+        ></div>
+        ${item.status}
+        </td>
+        <td class="font-light p-3 text-left">${item.transactionID}</td>
+        <td class="font-light p-3 text-right">₹${item.orderAmount}</td>
+        <td class="font-light p-3 text-right">₹${item.fees}</td>
+        <td class="font-light p-3 text-right">₹${item.total}</td>
+        `;
+        tableBody.appendChild(row);
       });
     </script>
   </body>
