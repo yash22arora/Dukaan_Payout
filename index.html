@@ -18,12 +18,17 @@
   <body
     class="bg-[#FAFAFA] h-screen flex flex-row w-screen max-h-screen max-w-screen overflow-hidden"
   >
-    <nav class="bg-[#1E2640] w-72 h-screen flex flex-col p-4 text-white">
-      <div class="flex flex-row items-center gap-4">
+    <nav
+      class="bg-[#1E2640] w-72 h-screen flex flex-col py-4 px-2.5 text-white"
+    >
+      <div class="flex flex-row items-center gap-4 px-1.5">
         <img src="./assets/store.png" alt="Nishyan Logo" class="w-10 h-10" />
         <div class="flex flex-col h-full justify-between">
-          <span class="font-medium opacity-100">Nishyan</span>
-          <a class="text-sm underline font-light opacity-80 cursor-pointer"
+          <span class="font-medium opacity-100 text-[15px] leading-[22px]"
+            >Nishyan</span
+          >
+          <a
+            class="underline font-light opacity-80 cursor-pointer text-[13px] leading-[16px]"
             >Visit store</a
           >
         </div>
@@ -48,8 +53,10 @@
           class="w-11 h-full p-2 bg-[#FFFFFF] bg-opacity-10 rounded-md"
         />
         <div class="flex flex-col justify-between">
-          <span class="opacity-80 text-sm">Available credits</span>
-          <span>222.10</span>
+          <span class="opacity-80 text-[13px] leading-[16px]"
+            >Available credits</span
+          >
+          <span class="font-medium leading-[24px]">222.10</span>
         </div>
       </div>
     </nav>
@@ -58,9 +65,13 @@
         class="py-3 px-9 flex flex-row gap-4 justify-between items-center bg-white border-b border-[#D9D9D9]"
       >
         <div class="flex flex-row items-center">
-          <h1 class="text-2xl">Payouts</h1>
+          <h1 class="text-xl leading-[28px] font-medium">Payouts</h1>
           <div class="flex flex-row ml-4 gap-1.5">
-            <img src="./assets//icons//info.svg" alt="info" class="w-4 h-4" />
+            <img
+              src="./assets//icons//info.svg"
+              alt="info"
+              class="w-[14px] h-[14px]"
+            />
             <span class="text-xs opacity-80">How it works</span>
           </div>
         </div>
@@ -72,27 +83,27 @@
           <img
             src="./assets/icons/search.svg"
             alt="search"
-            class="w-5 h-5 opacity-50"
+            class="w-4 h-4 opacity-50"
           />
           <input
             type="text"
             placeholder="Search features, tutorials, etc."
-            class="bg-transparent outline-none ml-2 text-light w-full"
+            class="bg-transparent outline-none ml-2 text-light w-full placeholder:text-[15px] placeholder:leading-[22px]"
           />
         </div>
         <div class="header-actions flex flex-row gap-3">
           <div
-            class="bg-[#E6E6E6] p-3 rounded-full flex items-center justify-center cursor-pointer"
+            class="bg-[#E6E6E6] w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
           >
             <img src="./assets//icons//notif.svg" alt="notif" class="w-5 h-5" />
           </div>
           <div
-            class="bg-[#E6E6E6] p-3 rounded-full flex items-center justify-center cursor-pointer"
+            class="bg-[#E6E6E6] w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
           >
             <img
               src="./assets//icons//chevron-solid.svg"
               alt="notif"
-              class="w-4"
+              class="w-4 h-4 relative top-0.5"
             />
           </div>
         </div>
@@ -100,9 +111,9 @@
       <main class="flex flex-col p-8 overflow-y-scroll">
         <div class="flex flex-col w-full mb-8">
           <div class="flex flex-row items-center justify-between">
-            <h1 class="text-2xl">Overview</h1>
+            <h1 class="text-xl leading-[28px] font-medium">Overview</h1>
             <div
-              class="border border-[#D9D9D9] bg-white rounded-sm text-lg px-4 py-1.5 ml-4 flex flex-row items-center gap-2"
+              class="border border-[#D9D9D9] bg-white leading-[24px] rounded-sm px-3.5 py-1.5 ml-4 flex flex-row items-center gap-1.5"
             >
               <select
                 class="w-full bg-transparent outline-none appearance-none tracking-wide font-light"
@@ -115,7 +126,7 @@
               <img
                 src="./assets//icons//chevron-black.svg"
                 alt="chevron-down"
-                class="w-3"
+                class="w-3 h-3"
               />
             </div>
           </div>
@@ -133,19 +144,19 @@
                   />
                 </h2>
                 <div class="flex flex-row mt-4 justify-between">
-                  <span class="text-3xl">₹2,312.23</span>
+                  <span class="text-[32px] leading-[38px]">₹2,312.23</span>
                   <a class="flex flex-row items-center underline cursor-pointer"
                     >23 orders
                     <img
                       src="./assets//icons/chevron.svg"
-                      class="-rotate-90 ml-2 h-4 w-4"
+                      class="-rotate-90 mt-1 h-4 w-4"
                       alt="chevron"
                     />
                   </a>
                 </div>
               </div>
               <div
-                class="bg-[#0E4F82] w-full px-6 py-2 rounded-md flex flex-row items-center justify-between text-sm"
+                class="bg-[#0E4F82] w-full px-6 py-2 rounded-md flex flex-row items-center justify-between text-sm leading-[20px]"
               >
                 <span class="opacity-80">Next payout date:</span>
                 <span class="opacity-80">Today, 04:00PM</span>
@@ -165,7 +176,9 @@
                   />
                 </h2>
                 <div class="flex flex-row mt-4 justify-between">
-                  <span class="text-3xl text-[#1A181E]">₹92,312.20</span>
+                  <span class="text-[32px] leading-[38px] text-[#1A181E]"
+                    >₹92,312.20</span
+                  >
                   <a
                     class="flex flex-row items-center text-[#146EB4] underline cursor-pointer"
                     >13 orders
@@ -175,7 +188,7 @@
                       viewBox="0 0 9 14"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      class="ml-2"
+                      class="ml-1"
                     >
                       <path
                         fill-rule="evenodd"
@@ -202,7 +215,9 @@
                   />
                 </h2>
                 <div class="flex flex-row mt-4 justify-between">
-                  <span class="text-3xl text-[#1A181E]">₹23,92,312.19</span>
+                  <span class="text-[32px] leading-[38px] text-[#1A181E]"
+                    >₹23,92,312.19</span
+                  >
                 </div>
               </div>
             </div>
@@ -210,8 +225,10 @@
         </div>
 
         <div class="flex flex-col w-full">
-          <h1 class="text-2xl">Transactions | This Month</h1>
-          <div class="flex flex-row items-center gap-3 my-5">
+          <h1 class="text-xl leading-[28px] font-medium">
+            Transactions | This Month
+          </h1>
+          <div class="flex flex-row items-center gap-3 my-5 text-sm">
             <div
               class="rounded-full py-1.5 px-4 bg-[#146EB4] text-white cursor-pointer"
             >
@@ -223,20 +240,20 @@
               Refunds (2)
             </div>
           </div>
-          <div class="shadow-card bg-white p-3">
+          <div class="shadow-card bg-white p-3 pb-0">
             <div class="flex flex-row justify-between items-center">
               <div
-                class="border border-[#D9D9D9] rounded-sm text-lg px-4 py-2.5 flex flex-row items-center gap-2 w-64"
+                class="border border-[#D9D9D9] rounded-sm text-[14px] leading-[20px] px-4 py-2.5 flex flex-row items-center gap-2 w-64"
               >
                 <img
                   src="./assets/icons/search.svg"
                   alt="search"
-                  class="w-4 h-4 opacity-50"
+                  class="w-3.5 h-3.5 opacity-50"
                 />
                 <input
                   type="text"
                   placeholder="Order ID or transaction ID"
-                  class="bg-transparent outline-none placeholder:text-[#D9D9D9] text-sm text-light w-full"
+                  class="bg-transparent outline-none placeholder:text-[#D9D9D9] text-[14px] leading-[20px] text-light w-full"
                 />
               </div>
               <div class="flex flex-row gap-4 h-min text-[#4D4D4D]">
@@ -263,17 +280,28 @@
               </div>
             </div>
             <table class="w-full my-3 border-collapse">
-              <thead class="p-3 bg-[#F2F2F2] text-[#4D4D4D] rounded-md">
+              <thead
+                class="p-3 bg-[#F2F2F2] text-[#4D4D4D] text-sm leading-[20px] rounded-md"
+              >
                 <tr class="font-normal">
-                  <th class="font-normal p-3 text-left">Date</th>
-                  <th class="font-normal p-3 text-left">Status</th>
-                  <th class="font-normal p-3 text-left">Transaction ID</th>
-                  <th class="font-normal p-3 text-right">Order amount</th>
-                  <th class="font-normal p-3 text-right">Transaction fees</th>
-                  <th class="font-normal p-3 text-right">Total</th>
+                  <th
+                    class="font-medium p-3 text-left flex flex-row items-center"
+                  >
+                    Date
+                    <img
+                      src="./assets/icons/chevron-solid.svg"
+                      alt="down-arrow"
+                      class="h-2 w-2 ml-1"
+                    />
+                  </th>
+                  <th class="font-medium p-3 text-left">Status</th>
+                  <th class="font-medium p-3 text-left">Transaction ID</th>
+                  <th class="font-medium p-3 text-right">Order amount</th>
+                  <th class="font-medium p-3 text-right">Transaction fees</th>
+                  <th class="font-medium p-3 text-right">Total</th>
                 </tr>
               </thead>
-              <tbody class="p-3">
+              <tbody class="p-3 pb-0">
                 <!-- <tr class="p-3 border-t-2 border-[#F2F2F2]">
                   <td class="font-medium p-3 text-left text-[#146EB4]">
                     Today, 09:00 PM
@@ -369,7 +397,10 @@
           "hover:bg-[#FFFFFF]",
           "hover:bg-opacity-10",
           "rounded-md",
-          "cursor-pointer"
+          "cursor-pointer",
+          "text-sm",
+          "leading-[20px]",
+          "font-medium"
         );
         if (item.active) navItem.classList.add("bg-[#FFFFFF]", "bg-opacity-10");
         navItem.innerHTML = `
@@ -444,13 +475,19 @@
       const tableBody = document.getElementsByTagName("tbody")[0];
       TABLE_ITEMS.forEach((item) => {
         const row = document.createElement("tr");
-        row.classList.add("p-3", "border-t-2", "border-[#F2F2F2]");
+        row.classList.add(
+          "p-3",
+          "border-t-2",
+          "border-[#F2F2F2]",
+          "text-sm",
+          "leading-[20px]"
+        );
         row.innerHTML = `
-        <td class="font-medium p-3 text-left text-[#146EB4]">
+        <td class="font-medium px-3 py-3.5 text-left text-[#146EB4]">
             ${item.date}
         </td>
         <td
-        class="font-light p-3 text-left flex flex-row items-center"
+        class="px-3 py-3.5 text-left flex flex-row items-center"
         >
         <div
             class="mr-1.5 w-2.5 h-2.5 ${
@@ -459,10 +496,10 @@
         ></div>
         ${item.status}
         </td>
-        <td class="font-light p-3 text-left">${item.transactionID}</td>
-        <td class="font-light p-3 text-right">₹${item.orderAmount}</td>
-        <td class="font-light p-3 text-right">₹${item.fees}</td>
-        <td class="font-light p-3 text-right">₹${item.total}</td>
+        <td class="px-3 py-3.5 text-left">${item.transactionID}</td>
+        <td class="px-3 py-3.5 text-right">₹${item.orderAmount}</td>
+        <td class="px-3 py-3.5 text-right">₹${item.fees}</td>
+        <td class="px-3 py-3.5 text-right">₹${item.total}</td>
         `;
         tableBody.appendChild(row);
       });
