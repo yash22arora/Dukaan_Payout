@@ -14,10 +14,10 @@
   <body
     class="bg-[#FAFAFA] h-screen flex flex-row w-screen max-h-screen max-w-screen overflow-hidden"
   >
-    <nav class="bg-[#1E2640] w-60 h-screen flex flex-col p-4 text-white">
+    <nav class="bg-[#1E2640] w-72 h-screen flex flex-col p-4 text-white">
       <div class="flex flex-row items-center gap-4">
         <img src="./assets/store.png" alt="Nishyan Logo" class="w-10 h-10" />
-        <div class="flex flex-col h-full judtify-between">
+        <div class="flex flex-col h-full justify-between">
           <span class="font-medium opacity-100">Nishyan</span>
           <a class="text-sm underline font-light opacity-80 cursor-pointer"
             >Visit store</a
@@ -49,7 +49,162 @@
         </div>
       </div>
     </nav>
-    <main></main>
+    <div class="flex flex-col w-full min-w-fit">
+      <header
+        class="py-3 px-9 flex flex-row gap-4 justify-between items-center bg-white border-b border-[#D9D9D9]"
+      >
+        <div class="flex flex-row items-center">
+          <h1 class="text-2xl">Payouts</h1>
+          <div class="flex flex-row ml-4 gap-1.5">
+            <img src="./assets//icons//info.svg" alt="info" class="w-4 h-4" />
+            <span class="text-xs opacity-80">How it works</span>
+          </div>
+        </div>
+        <div
+          type="text"
+          placeholder="Search"
+          class="bg-[#F2F2F2] rounded-md px-4 py-2 w-96 flex flex-row items-center gap-2 mr-16 ml-4"
+        >
+          <img
+            src="./assets/icons/search.svg"
+            alt="search"
+            class="w-5 h-5 opacity-50"
+          />
+          <input
+            type="text"
+            placeholder="Search features, tutorials, etc."
+            class="bg-transparent outline-none ml-2 text-light w-full"
+          />
+        </div>
+        <div class="header-actions flex flex-row gap-3">
+          <div
+            class="bg-[#E6E6E6] p-3 rounded-full flex items-center justify-center"
+          >
+            <img src="./assets//icons//notif.svg" alt="notif" class="w-5 h-5" />
+          </div>
+          <div
+            class="bg-[#E6E6E6] p-3 rounded-full flex items-center justify-center"
+          >
+            <img
+              src="./assets//icons//chevron-solid.svg"
+              alt="notif"
+              class="w-4"
+            />
+          </div>
+        </div>
+      </header>
+      <main class="flex flex-col p-8">
+        <div class="flex flex-col w-full">
+          <div class="flex flex-row items-center justify-between">
+            <h1 class="text-2xl">Overview</h1>
+            <div
+              class="border border-[#D9D9D9] rounded-md text-lg px-4 py-2 ml-4 flex flex-row items-center gap-2"
+            >
+              <select
+                class="w-full bg-transparent outline-none appearance-none tracking-wide font-light"
+                name="overview-period"
+                id="overview-period"
+              >
+                <option value="curr_month">This Month</option>
+                <option value="last_month">Last Month</option>
+              </select>
+              <img
+                src="./assets//icons//chevron-black.svg"
+                alt="chevron-down"
+                class="w-3"
+              />
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-5 mt-6">
+            <div
+              class="flex flex-col rounded-md bg-[#146EB4] shadow-card text-white"
+            >
+              <div class="flex flex-col p-5">
+                <h2 class="tracking-wide font-light flex flex-row items-center">
+                  Next Payout
+                  <img
+                    src="./assets/icons/info-white.svg"
+                    alt="info"
+                    class="h-4 w-4 text-white ml-2"
+                  />
+                </h2>
+                <div class="flex flex-row mt-4 justify-between">
+                  <span class="text-3xl">₹2,312.23</span>
+                  <a class="flex flex-row items-center"
+                    >23 orders
+                    <img
+                      src="./assets//icons/chevron.svg"
+                      class="-rotate-90 ml-2 h-4 w-4"
+                      alt="chevron"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div
+                class="bg-[#0E4F82] w-full px-6 py-2 rounded-md flex flex-row items-center justify-between text-sm"
+              >
+                <span class="opacity-80">Next payout date:</span>
+                <span class="opacity-80">Today, 04:00PM</span>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col rounded-md bg-white shadow-card text-[#4D4D4D] h-min"
+            >
+              <div class="flex flex-col p-5">
+                <h2 class="tracking-wide font-light flex flex-row items-center">
+                  Amount Pending
+                  <img
+                    src="./assets/icons/info-white.svg"
+                    alt="info"
+                    class="h-4 w-4 text-white ml-2"
+                  />
+                </h2>
+                <div class="flex flex-row mt-4 justify-between">
+                  <span class="text-3xl text-[#1A181E]">₹92,312.20</span>
+                  <a class="flex flex-row items-center text-[#146EB4] underline"
+                    >13 orders
+                    <svg
+                      width="9"
+                      height="14"
+                      viewBox="0 0 9 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="ml-2"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.621018 0.292893C1.01154 -0.0976311 1.64471 -0.0976311 2.03523 0.292893L8.03523 6.29289C8.22277 6.48043 8.32813 6.73478 8.32813 7C8.32813 7.26522 8.22277 7.51957 8.03523 7.70711L2.03523 13.7071C1.64471 14.0976 1.01154 14.0976 0.621019 13.7071C0.230495 13.3166 0.230494 12.6834 0.621019 12.2929L5.91391 7L0.621018 1.70711C0.230494 1.31658 0.230494 0.683418 0.621018 0.292893Z"
+                        fill="#146EB4"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col rounded-md bg-white shadow-card text-[#4D4D4D] h-min"
+            >
+              <div class="flex flex-col p-5">
+                <h2 class="tracking-wide font-light flex flex-row items-center">
+                  Amount Processed
+                  <img
+                    src="./assets/icons/info-white.svg"
+                    alt="info"
+                    class="h-4 w-4 text-white ml-2"
+                  />
+                </h2>
+                <div class="flex flex-row mt-4 justify-between">
+                  <span class="text-3xl text-[#1A181E]">₹23,92,312.19</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
     <script>
       const NAV_ITEMS = [
         {
