@@ -19,21 +19,120 @@
         <img src="./assets/store.png" alt="Nishyan Logo" class="w-10 h-10" />
         <div class="flex flex-col h-full judtify-between">
           <span class="font-medium opacity-100">Nishyan</span>
-          <a class="text-sm underline font-light opacity-80">Visit store</a>
+          <a class="text-sm underline font-light opacity-80 cursor-pointer"
+            >Visit store</a
+          >
         </div>
         <img
           src="./assets//icons//chevron.svg"
           alt="chevron-down"
-          class="w-5 h-5 ml-auto"
+          class="w-5 h-5 ml-auto cursor-pointer"
         />
       </div>
       <div id="nav-items" class="flex flex-col w-full gap-2 my-6">
-        <a class="px-4 py-2 flex flex-row gap-3">
+        <!-- <a class="px-4 py-2 flex flex-row gap-3">
           <img src="./assets//icons//home.svg" alt="home" class="w-5 h-5" />
           <span class="opacity-80">Home</span>
-        </a>
+        </a> -->
+      </div>
+      <div
+        class="mt-auto bg-[#353C53] px-3 py-2 flex flex-row gap-3 rounded-md"
+      >
+        <img
+          src="./assets//icons//wallet.svg"
+          alt="wallet"
+          class="w-11 h-full p-2 bg-[#FFFFFF] bg-opacity-10 rounded-md"
+        />
+        <div class="flex flex-col justify-between">
+          <span class="opacity-80 text-sm">Available credits</span>
+          <span>222.10</span>
+        </div>
       </div>
     </nav>
     <main></main>
+    <script>
+      const NAV_ITEMS = [
+        {
+          name: "Home",
+          icon: "./assets/icons/home.svg",
+          active: false,
+        },
+        {
+          name: "Orders",
+          icon: "./assets/icons/orders.svg",
+          active: false,
+        },
+        {
+          name: "Products",
+          icon: "./assets/icons/products.svg",
+          active: false,
+        },
+        {
+          name: "Delivery",
+          icon: "./assets/icons/delivery.svg",
+          active: false,
+        },
+        {
+          name: "Marketing",
+          icon: "./assets/icons/marketing.svg",
+          active: false,
+        },
+        {
+          name: "Analytics",
+          icon: "./assets/icons/analytics.svg",
+          active: false,
+        },
+        {
+          name: "Payouts",
+          icon: "./assets/icons/payouts.svg",
+          active: true,
+        },
+        {
+          name: "Discounts",
+          icon: "./assets/icons/discounts.svg",
+          active: false,
+        },
+        {
+          name: "Audience",
+          icon: "./assets/icons/audience.svg",
+          active: false,
+        },
+        {
+          name: "Appearance",
+          icon: "./assets/icons/appearance.svg",
+          active: false,
+        },
+        {
+          name: "Plugins",
+          icon: "./assets/icons/plugins.svg",
+          active: false,
+        },
+      ];
+
+      const navItems = document.getElementById("nav-items");
+      NAV_ITEMS.forEach((item) => {
+        const navItem = document.createElement("a");
+        navItem.classList.add(
+          "px-4",
+          "py-2",
+          "flex",
+          "flex-row",
+          "items-center",
+          "gap-3",
+          "hover:bg-[#FFFFFF]",
+          "hover:bg-opacity-10",
+          "rounded-md",
+          "cursor-pointer"
+        );
+        if (item.active) navItem.classList.add("bg-[#FFFFFF]", "bg-opacity-10");
+        navItem.innerHTML = `
+            <img src="${item.icon}" alt="${item.name}" class="w-5 h-5" />
+            <span class=${item.active ? "opacity-100" : "opacity-80"}>${
+          item.name
+        }</span>
+          `;
+        navItems.appendChild(navItem);
+      });
+    </script>
   </body>
 </html>
