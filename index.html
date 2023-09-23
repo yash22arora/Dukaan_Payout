@@ -93,12 +93,12 @@
           </div>
         </div>
       </header>
-      <main class="flex flex-col p-8">
-        <div class="flex flex-col w-full">
+      <main class="flex flex-col p-8 overflow-y-scroll">
+        <div class="flex flex-col w-full mb-8">
           <div class="flex flex-row items-center justify-between">
             <h1 class="text-2xl">Overview</h1>
             <div
-              class="border border-[#D9D9D9] rounded-md text-lg px-4 py-2 ml-4 flex flex-row items-center gap-2"
+              class="border border-[#D9D9D9] bg-white rounded-sm text-lg px-4 py-2 ml-4 flex flex-row items-center gap-2"
             >
               <select
                 class="w-full bg-transparent outline-none appearance-none tracking-wide font-light"
@@ -198,6 +198,58 @@
                 </h2>
                 <div class="flex flex-row mt-4 justify-between">
                   <span class="text-3xl text-[#1A181E]">₹23,92,312.19</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col w-full">
+          <h1 class="text-2xl">Transactions | This Month</h1>
+          <div class="flex flex-row items-center gap-3 my-5">
+            <div class="rounded-full py-1.5 px-4 bg-[#146EB4] text-white">
+              Payouts (22)
+            </div>
+            <div class="rounded-full py-1.5 px-4 bg-[#E6E6E6] text-[#808080]">
+              Refunds (2)
+            </div>
+          </div>
+          <div class="shadow-card bg-white p-3">
+            <div class="flex flex-row justify-between items-center">
+              <div
+                class="border border-[#D9D9D9] rounded-sm text-lg px-4 py-2.5 flex flex-row items-center gap-2 w-64"
+              >
+                <img
+                  src="./assets/icons/search.svg"
+                  alt="search"
+                  class="w-4 h-4 opacity-50"
+                />
+                <input
+                  type="text"
+                  placeholder="Order ID or transaction ID"
+                  class="bg-transparent outline-none text-[#D9D9D9] opacity-80 text-sm text-light w-full"
+                />
+              </div>
+              <div class="flex flex-row gap-4 h-min text-[#4D4D4D]">
+                <div
+                  class="border border-[#D9D9D9] rounded-sm p-2 px-2.5 flex flex-row gap-2 items-center"
+                >
+                  <span>Sort</span>
+                  <img
+                    src="./assets//icons/sort.svg"
+                    alt="sort"
+                    class="h-5 w-5"
+                  />
+                </div>
+
+                <div
+                  class="border border-[#D9D9D9] rounded-sm p-2 flex flex-row gap-2 items-center"
+                >
+                  <img
+                    src="./assets//icons/download.svg"
+                    alt="sort"
+                    class="h-5 w-5"
+                  />
                 </div>
               </div>
             </div>
